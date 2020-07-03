@@ -1,0 +1,1 @@
+module.exports = "precision highp float;\nattribute vec2 position;\nvoid main() {\n    gl_Position = vec4(position, .0, 1.0);\n}"

@@ -1,0 +1,1 @@
+module.exports = "uniform sampler2D intex;\nuniform sampler2D bloomTexture;\nvarying vec2 vUv;\nvec4 getTexture( sampler2D texelToLinearTexture ) {\n    return mapTexelToLinear( texture2D( texelToLinearTexture , vUv ) );\n}\nvoid main() {\n    vec4 bloom = vec4( 1.0 ) * getTexture( bloomTexture );\n    vec4 base =  getTexture( intex );\n    gl_FragColor = base + bloom;\n}\n"

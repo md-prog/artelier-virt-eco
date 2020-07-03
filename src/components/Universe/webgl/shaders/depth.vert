@@ -1,0 +1,1 @@
+module.exports = "precision highp float;\nvarying float vDepth;\nvoid main() {\n    vec4 mvPos = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );\n    vDepth =  - (mvPos.z+1.1);\n    gl_Position =  mvPos;\n}"

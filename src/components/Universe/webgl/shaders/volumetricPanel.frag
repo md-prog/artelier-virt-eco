@@ -1,0 +1,1 @@
+module.exports = "precision mediump float;\nuniform sampler2D tex;\nuniform vec2 res;\nvoid main()\n    {\n    vec2 vUv =  gl_FragCoord.xy / res;\n    float alpha = texture2D(tex, vUv).r;\n    vec3 color = vec3(0.96,0.74,0.25) ;\n    if(alpha  == 0.) discard;\n    gl_FragColor =  vec4(color, alpha);\n}"

@@ -1,0 +1,1 @@
+module.exports = "precision highp float;\nuniform sampler2D tDiffuse;\nvarying vec2 vUv;\nuniform float dark;\nuniform float opacity;\nvoid main() {\n    vec4 image = vec4(1.);\n    image.a = texture2D( tDiffuse , vUv).a ;\n    image.a = pow(image.a,2.) * opacity;\n    image.rgb *= dark;\n    gl_FragColor = image;\n}"

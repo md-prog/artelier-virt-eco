@@ -1,0 +1,1 @@
+module.exports = "uniform sampler2D intex;\nvarying vec2 vUv;\nvoid main() {\n    vec4 texel = texture2D( intex, vUv );\n    gl_FragColor = texel;\n}"

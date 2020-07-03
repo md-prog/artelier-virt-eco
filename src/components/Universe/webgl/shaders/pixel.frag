@@ -1,0 +1,1 @@
+module.exports = "precision highp float;\nuniform sampler2D imageTex;\nuniform vec2 res;\nvarying vec2 vUv;\nvoid main() {\n    vec4 image = texture2D( imageTex , vUv);\n    gl_FragColor = image;\n}\n"

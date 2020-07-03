@@ -1,0 +1,1 @@
+module.exports = __webpack_public_path__ + "static/ibm-plex-serif-v8-latin-500-6a44fbf0edbc84ed9a8fd534d2fb6a60.woff";

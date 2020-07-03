@@ -1,0 +1,1 @@
+module.exports = "precision mediump float;\nuniform float blackout;\n\nvoid main() {\n    gl_FragColor =  vec4(0.,0.,0., blackout);\n}"

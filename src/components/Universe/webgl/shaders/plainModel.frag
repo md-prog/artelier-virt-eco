@@ -1,0 +1,1 @@
+module.exports = "precision highp float;\nuniform sampler2D tDiffuse;\nuniform float time;\nuniform vec3 color;\nvarying vec2 vUv;\nvarying float vLighting;\nuniform bool isDark;\nvoid main() {\n    vec3 c = color ;\n    vec4 pixel = vec4( c, 1.);\n    gl_FragColor = isDark ? vec4(0.,0.,0.,1.) : pixel;\n}"

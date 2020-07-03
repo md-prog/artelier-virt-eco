@@ -1,0 +1,1 @@
+module.exports = "precision highp float;\nuniform sampler2D tDiffuse;\nuniform vec2 res;\nuniform float color;\nvarying vec2 vUv;\nvoid main() {\n     vec2 uv = vec2(gl_PointCoord.x, gl_PointCoord.y);\n    float d = distance(uv, vec2(0.5));\n    if(d > 0.5 ) discard;\n    vec4 pixel = vec4(vec3(color),1.);\n    gl_FragColor = pixel;\n}"

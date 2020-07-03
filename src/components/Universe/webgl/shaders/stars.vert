@@ -1,0 +1,1 @@
+module.exports = "precision highp float;\nvarying vec2 vUv;\nuniform float scale;\nvoid main() {\n    vUv = uv;\n    vec4 pos = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );\n    gl_PointSize = max(20. * (1. -  pos.z/200. ), 2.) * scale;\n    gl_Position = pos;\n}"
