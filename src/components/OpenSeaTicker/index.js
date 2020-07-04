@@ -12,12 +12,10 @@ import uniqBy from "lodash/uniqBy";
 import concat from "lodash/concat";
 import { bn, getEventParticular, normalizePriceDisplay } from "./helper";
 import BigNumber from "bignumber.js";
-import { linkColor } from "../../config/colors";
 import { usePageVisibility } from "react-page-visibility";
 import { useProgress } from "../ProgressBar/ProgressBarProvider";
 const MAX_ADDR_LEN = 6;
 const MAX_LABEL_LEN = 15;
-const MAX_LABEL_LEN_FOR_BADGED_ACCOUNTS = 10;
 const MAX_ASSET_NAME_LEN = 36;
 function truncateText(str, maxLength = 5) {
     if (!str || str.length <= maxLength) {
@@ -96,7 +94,6 @@ const OpenSeaTicker = () => {
     useEffect(() => {
         const onScroll = () => {
             const scroll = window.scrollY;
-            let sectionName = "";
             let subSectionName = "";
             for (let i = 0; i < map.length; i++) {
                 let section = map[i];
@@ -104,7 +101,6 @@ const OpenSeaTicker = () => {
                     scroll >= section.sectionStart &&
                     scroll <= section.sectionEnd
                 ) {
-                    sectionName = section.title;
                     for (let j = 0; j < section.sections.length; j++) {
                         let subSection = section.sections[j];
                         if (
@@ -229,9 +225,6 @@ const OpenSeaTicker = () => {
                                         />
                                     ) : null;
 
-                                const timestamp = event.transaction
-                                    ? event.transaction.timestamp
-                                    : event.created_date;
                                 return (
                                     <Event>
                                         <p className="activity_data--info">

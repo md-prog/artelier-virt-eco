@@ -5,7 +5,6 @@ import SectionContainer from "../Platform/SectionContainer";
 
 import { breakpoints, respond } from "../../styles/responsive";
 import { graphql, useStaticQuery } from "gatsby";
-import gridSizing from "../../styles/gridSizing";
 const Container = styled.div`
     position: relative;
     width: 100%;

@@ -1,6 +1,5 @@
 import React, { createRef, useEffect, useLayoutEffect, useRef } from "react";
 import styled from "@emotion/styled";
-import { css, Global } from "@emotion/core";
 import gsap from "gsap";
 import deepLink, { deepLinkByID } from "../../util/deepLink";
 import { useArticle } from "../Platform/ArticleContext";
@@ -46,16 +45,16 @@ const LargeMenuItem = styled.a`
     cursor: pointer;
     opacity: 0;
 `;
-const HomeLink = styled.a`
-    font-family: FoundryGridnik, sans-serif;
-    ${respond(14, 19, "px", "fontSize", 420, 1800, "vmin", false)};
-    opacity: 0.6;
-    position: absolute;
-    ${respond(15, 38, "px", "bottom", 420, 1800, "vmin", false)};
-    ${respond(20, 60, "px", "right", 420, 1800, "vmin", false)};
-    text-transform: uppercase;
-    cursor: pointer;
-`;
+// const HomeLink = styled.a`
+//     font-family: FoundryGridnik, sans-serif;
+//     ${respond(14, 19, "px", "fontSize", 420, 1800, "vmin", false)};
+//     opacity: 0.6;
+//     position: absolute;
+//     ${respond(15, 38, "px", "bottom", 420, 1800, "vmin", false)};
+//     ${respond(20, 60, "px", "right", 420, 1800, "vmin", false)};
+//     text-transform: uppercase;
+//     cursor: pointer;
+// `;
 
 const Menu = ({ state, setState }) => {
     const ref = useRef();

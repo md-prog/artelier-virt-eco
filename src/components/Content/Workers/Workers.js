@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import { useSection } from "../../Platform/SectionContext";
 import { useFontObserver } from "../../Platform/FontObserver";
 import { useResizer } from "../../Platform/Resizer";
-import { workersColor } from "../../../config/colors";
 import WorkerRow from "./WorkerRow";
 import chunk from "lodash/chunk";
 import Asteroid from "../../Decorations/Asteroid";

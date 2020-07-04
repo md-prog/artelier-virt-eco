@@ -12,7 +12,6 @@ import styled from "@emotion/styled";
 import { useInView } from "react-intersection-observer";
 import mergeRefs from "../../util/mergeRefs";
 import { isBrowser } from "@emotion/core/src/utils";
-import { extrema } from "../../util/diff";
 import { gsap } from "gsap";
 import { respond } from "../../styles/responsive";
 import useResizeObserver from "use-resize-observer/polyfilled";

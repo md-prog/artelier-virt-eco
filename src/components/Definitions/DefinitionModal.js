@@ -72,7 +72,6 @@ const Overlay = styled.div`
 `;
 const Content = styled.div``;
 
-const Modal = ({}) => {};
 const DefinitionModal = ({
     word,
     content,

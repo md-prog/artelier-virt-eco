@@ -3,7 +3,7 @@ import BigNumber from "bignumber.js";
 
 export const normalizePriceDisplay = (num, decimals) => {
     let ret;
-    if (decimals == null) {
+    if (decimals === null) {
         decimals = +num >= 1000 ? 2 : +num >= 10 ? 3 : 4;
     }
     let str = (+num).toFixed(decimals);
@@ -95,7 +95,7 @@ export function getPriceLabel(event) {
             ? bn(event.quantity, event.asset.decimals)
             : event.quantity;
     const normalize = field =>
-        field == null
+        field === null
             ? undefined
             : bn(field, event.payment_token.decimals).dividedBy(unitQuantity);
     const currencySymbol = event.payment_token.symbol || ""; // || "Ξ"

@@ -5,7 +5,7 @@ import SectionContainer from "../Platform/SectionContainer";
 import { graphql, useStaticQuery } from "gatsby";
 import keyBy from "lodash/keyBy";
 import SectionIntro from "../SubSections/SectionIntro";
-import { invertedRespond, respond } from "../../styles/responsive";
+import { respond } from "../../styles/responsive";
 const Container = styled.div`
     padding-top: 150vh;
     position: relative;

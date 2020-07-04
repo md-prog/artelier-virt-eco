@@ -4,7 +4,6 @@ import title from "../../data/the-workers/the-workers.svg";
 import { respond } from "../../styles/responsive";
 import Asteroid from "../Decorations/Asteroid";
 import ParallaxContainer from "../Parallax/ParallaxContainer";
-import ParallaxLayer from "../Parallax/ParallaxLayer";
 const Container = styled.div`
     width: 100%;
     ${respond(50, 200, "px", "paddingTop")};

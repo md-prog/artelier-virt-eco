@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import gridSizing from "../styles/gridSizing";
 import { breakpoints, respond } from "../styles/responsive";
 import Text from "./Text";
-import CitizenProfileQuote from "../components/Content/CitizenProfileQuote";
 import Modal from "react-modal";
 const Container = styled.div`
     ${({ theme }) => breakpoints(theme.position.cards, "gridColumn")};

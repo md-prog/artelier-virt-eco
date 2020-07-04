@@ -2,7 +2,6 @@ import React, { useEffect, useLayoutEffect, useRef, forwardRef } from "react";
 import { useSection } from "./SectionContext";
 import { useArticle } from "./ArticleContext";
 import mergeRefs from "../../util/mergeRefs";
-import { Match } from "@reach/router";
 import { css } from "@emotion/core";
 import { useResizer } from "./Resizer";
 import { useFontObserver } from "./FontObserver";

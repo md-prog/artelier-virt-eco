@@ -10,7 +10,6 @@ import { graphql } from "gatsby";
 import SidebarProvider from "./SidebarContext";
 import useResizeObserver from "use-resize-observer/polyfilled";
 import { useResizer } from "./Resizer";
-import debounce from "lodash/debounce";
 import Credits from "../Sections/Credits";
 const Article = ({ ...props }) => {
     const { ref, width, height } = useResizeObserver();

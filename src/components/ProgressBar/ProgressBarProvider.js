@@ -2,11 +2,7 @@ import React, {
     useContext,
     createContext,
     useState,
-    useReducer,
-    useCallback,
 } from "react";
-import { insertSorted } from "../../util/array";
-import filter from "lodash/filter";
 
 const ProgressBarContext = createContext();
 
