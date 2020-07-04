@@ -1,19 +1,19 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Atelier's Virtual Economy blog
 
-Source code for https://atelier.net/virtual-economy/
+Replication of [Artelier's Virtual Economy](https://atelier.net/virtual-economy/) blog.  
 [FWA OF THE DAY - May 23, 2020](https://thefwa.com/cases/the-virtual-economy)
+
+## Technologies used
+
+- [Gatsby](https://gatsbyjs.org)
+- [Three.js](https://threejs.org)
+- [Greensocks](https://greensock.com)
 
 ## 🚀 Quick start
 
-1.  **Start developing.**
+1. **Start developing.**
+
+    Project initiated by [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start/) from Gatsby default starter.
 
     Navigate into your new site’s directory and start it up.
 
@@ -21,7 +21,6 @@ Source code for https://atelier.net/virtual-economy/
     cd my-default-starter/
     gatsby develop
     ```
-
 
 ## 💫 Deploy
 
