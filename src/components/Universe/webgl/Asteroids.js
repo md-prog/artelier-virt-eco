@@ -1,4 +1,12 @@
-import { Object3D, CubeCamera, MeshPhongMaterial, Color } from "three";
+import {
+    Object3D,
+    WebGLCubeRenderTarget,
+    RGBFormat,
+    LinearMipmapLinearFilter,
+    CubeCamera,
+    MeshPhongMaterial,
+    Color
+} from "three";
 import ModelManager from "./ModelManager";
 import asteroid_models from "../../../models/asteroids2.gltf";
 
@@ -39,7 +47,11 @@ class Asteroids extends Object3D {
     update = () => {};
 
     glassify = () => {
-        this.cubeCamera = new CubeCamera(1, 100000, 1024);
+        const cubeRenderTarget = new WebGLCubeRenderTarget( 1024, {
+            format: RGBFormat,
+            generateMipmaps: true,
+            minFilter: LinearMipmapLinearFilter });
+        this.cubeCamera = new CubeCamera(1, 100000, cubeRenderTarget);
 
         const matPink = new MeshPhongMaterial({
             color: 0xeb4a58,

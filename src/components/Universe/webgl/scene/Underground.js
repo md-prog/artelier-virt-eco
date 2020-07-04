@@ -4,6 +4,9 @@ import {
     Object3D,
     Vector2,
     ShaderMaterial,
+    WebGLCubeRenderTarget,
+    RGBFormat,
+    LinearMipmapLinearFilter,
     CubeCamera,
     MeshStandardMaterial,
     WebGLRenderTarget,
@@ -235,7 +238,11 @@ class Underground {
     };
 
     setupMiddle = model => {
-        this.cubeCamera = new CubeCamera(1, 100000, 1024);
+        const cubeRenderTarget = new WebGLCubeRenderTarget( 1024, {
+            format: RGBFormat,
+            generateMipmaps: true,
+            minFilter: LinearMipmapLinearFilter });
+        this.cubeCamera = new CubeCamera(1, 100000, cubeRenderTarget);
 
         const mat = new MeshStandardMaterial({
             color: 0x050505,

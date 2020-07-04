@@ -37,8 +37,8 @@ class ModelManager {
 
     setMaterial = (child, allDark = false) => {
         const strings = ["black", "white"];
-        const color1 = child.children[0].material.name;
-        const color2 = child.children[1].material.name;
+        const color1 = child.children[0].material && child.children[0].material.name;
+        const color2 = child.children[1].material && child.children[1].material.name;
 
         if (child.children[0].name.includes("square")) {
             child.children.forEach(kiddo => {

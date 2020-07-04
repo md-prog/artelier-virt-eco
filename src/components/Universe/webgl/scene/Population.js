@@ -5,8 +5,11 @@ import {
     Vector2,
     ShaderMaterial,
     WebGLRenderTarget,
+    WebGLCubeRenderTarget,
+    RGBFormat,
+    LinearMipmapLinearFilter,
     NearestFilter,
-    CubeCamera,
+    CubeCamera,   
     IcosahedronGeometry,
     Mesh,
     MeshStandardMaterial,
@@ -192,7 +195,11 @@ class Population {
     };
 
     setupMiddle = () => {
-        this.cubeCamera = new CubeCamera(1, 100000, 1024);
+        const cubeRenderTarget = new WebGLCubeRenderTarget( 1024, {
+            format: RGBFormat,
+            generateMipmaps: true,
+            minFilter: LinearMipmapLinearFilter });
+        this.cubeCamera = new CubeCamera(1, 100000, cubeRenderTarget);
         const geo = new IcosahedronGeometry(5, 0);
         const mat = new MeshStandardMaterial({
             color: 0x7526f5,

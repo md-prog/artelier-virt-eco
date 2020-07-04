@@ -3,6 +3,9 @@ import {
     Object3D,
     MeshStandardMaterial,
     MeshBasicMaterial,
+    WebGLCubeRenderTarget,
+    RGBFormat,
+    LinearMipmapLinearFilter,
     CubeCamera,
     IcosahedronGeometry,
     PointLight,
@@ -139,7 +142,11 @@ class PioneerPlanet extends Object3D {
     };
 
     setupSun = () => {
-        this.cubeCamera = new CubeCamera(1, 100000, 1024);
+        var cubeRenderTarget = new WebGLCubeRenderTarget( 1024, {
+            format: RGBFormat,
+            generateMipmaps: true,
+            minFilter: LinearMipmapLinearFilter });
+        this.cubeCamera = new CubeCamera(1, 100000, cubeRenderTarget);
         const geo = new IcosahedronGeometry(20, 1);
 
         const mat = new MeshBasicMaterial({
