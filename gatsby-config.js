@@ -21,11 +21,20 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icons:[
+          {src:"src/icons/icon-48x48.png",sizes:"48x48",type:"image/png"},
+          {src:"src/icons/icon-72x72.png",sizes:"72x72",type:"image/png"},
+          {src:"src/icons/icon-96x96.png",sizes:"96x96",type:"image/png"},
+          {src:"src/icons/icon-144x144.png",sizes:"144x144",type:"image/png"},
+          {src:"src/icons/icon-192x192.png",sizes:"192x192",type:"image/png"},
+          {src:"src/icons/icon-256x256.png",sizes:"256x256",type:"image/png"},
+          {src:"src/icons/icon-384x384.png",sizes:"384x384",type:"image/png"},
+          {src:"src/icons/icon-512x512.png",sizes:"512x512",type:"image/png"}]}
       },
+      
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
@@ -620,6 +629,12 @@ module.exports = {
           }
         },
         lang: "*"
+      },
+    },
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
       },
     },
   ],
