@@ -87,8 +87,14 @@ const Breadcrumbs = () => {
         };
     }, [map, setCurrentSubSection, setCurrentSection]);
     useEffect(() => {
+        // pageView(
+        //     `/virtual-economy/${currentSection
+        //         .toLowerCase()
+        //         .replace(" ", "-")}`,
+        //     currentSection
+        // );
         pageView(
-            `/virtual-economy/${currentSection
+            `/${currentSection
                 .toLowerCase()
                 .replace(" ", "-")}`,
             currentSection
